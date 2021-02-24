@@ -1,9 +1,5 @@
 /* Universal Styles */
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     background-color: #FEFBF1;
     font-size: 14px;
@@ -23,7 +19,7 @@ body {
     height: 8rem;
     background-color: #FFF;
 }
-ul.icons {
+.icons {
     display: flex;
     align-items: center;
     margin-left: 0.6rem;
@@ -36,7 +32,7 @@ ul.icons {
     transform-origin: center;
 }
 
-.icons .tiktok-icon a img {
+.icons__tiktok a img {
     width: 1.9rem;
     transition: transform 200ms ease-out;
     transform-origin: center;
@@ -57,12 +53,12 @@ ul.icons {
 }
 
 
-.nav-links {
+.links {
     display: flex; 
     margin-right: 0.6rem;
 }
 
-.nav-item a {
+.links__item a {
     font-family: 'lato', sans-serif;
     text-transform: uppercase;
     padding: 0.8rem;
@@ -88,7 +84,7 @@ a:hover {
     transform: scale(1.5, 1.5);
 }
 
-.nav-item a:hover {
+.links__item a:hover {
     letter-spacing: 0.3rem;
     padding-left: 0.3rem;
     margin: 0, 0.2rem;
@@ -115,7 +111,7 @@ a:hover {
         
     }
 
-    .nav-links {
+    .links {
         order: 2;
         margin-top: 1rem;
         margin-right: 0;
@@ -131,31 +127,31 @@ a:hover {
 
 /* Main Grid */
 
-main.grid {
+.grid {
     position: relative;
     top: 8rem;
     display: grid;
     grid-template-columns: repeat (12, 1fr);
 }
 
-div.banner-image-container {
+.banner-image-container {
     grid-column: 1 / 13; 
     grid-row-start: 1;
 }
 
-.grid img {
+.banner-image-container img {
     max-width: 100%;
 }
 
 @media only screen and (max-width: 1100px) {
     /* no more fixed nav bar!*/
-    main.grid {
+    .grid {
         position: initial;
         
     }
 }
 
-main div.flex {
+.flex {
     grid-column: 1 / 13;
     display: flex;
     flex-direction: column;
@@ -171,26 +167,25 @@ h1 {
     margin-top: 2rem;
 }
 
-div.new-release {
+.latest-release {
     grid-row-start: 2;
 }
 
-div.bio {
+.bio {
     grid-row-start: 3;
     border-top: 1px solid #B6CDD8;
     border-bottom: thin solid #B6CDD8;
     position: relative;
 }
 
-div.tour {
+.tour {
     grid-row-start: 4;
     margin: 4rem 0;
 }
 
-div.contact {
+.contact {
     grid-row-start: 5;
     background-color: #314E5D;
-    margin-top: 2rem;
     color: #FEFBF1;
     padding: 4rem;
 }
@@ -216,7 +211,7 @@ h3 {
     padding: 0.3rem;
 }
 
-div.bio p {
+.bio p {
     font-family: 'raleway', sans-serif;
     color: #314E5D;
     padding: 0.5rem;
@@ -228,13 +223,7 @@ div.bio p {
     margin-top: 1.5rem;
 }
 
-.bio p.margin-bottom {
-    margin-bottom: 2.5rem;
-}
-
 .bio a {
-    position: absolute;
-    top: 88%;
     font-family: 'Rozha One', serif;
     text-transform: uppercase;
     background-color: #314E5D;
@@ -242,7 +231,7 @@ div.bio p {
     color: #FEFBF1;
     font-size: 1.2rem;
     letter-spacing: 0.3rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
     border: 0;
     transition: opacity 200ms ease-out, 
     color 200ms ease-out;

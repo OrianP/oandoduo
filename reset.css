@@ -25,6 +25,7 @@ footer, header, hgroup, menu, section {
 }
 body {
 	line-height: 1;
+	box-sizing: border-box;
 }
 ol, ul, a {
 	list-style: none; 
