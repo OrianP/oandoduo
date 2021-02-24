@@ -1,0 +1,259 @@
+/* Universal Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FEFBF1;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+/* Nav Bar */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    background-color: #FFF;
+}
+ul.icons {
+    display: flex;
+    align-items: center;
+    margin-left: 0.6rem;
+}
+
+.icons a img {
+    width: 2.5rem; 
+    margin: 0.2rem;
+    transition: transform 200ms ease-out;
+    transform-origin: center;
+}
+
+.icons .tiktok-icon a img {
+    width: 1.9rem;
+    transition: transform 200ms ease-out;
+    transform-origin: center;
+}
+
+.logo-container {
+    width: 10rem;
+    height: 10rem;
+    position: fixed;
+    left: 50%;
+    margin-left: -5rem;
+    
+}
+
+.logo { 
+    height: auto;
+    max-width: 100%;
+}
+
+
+.nav-links {
+    display: flex; 
+    margin-right: 0.6rem;
+}
+
+.nav-item a {
+    font-family: 'lato', sans-serif;
+    text-transform: uppercase;
+    padding: 0.8rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    padding-left: 0.1rem;
+    transition: letter-spacing 400ms ease-in;
+
+}
+
+/* Nav Bar Hover Transitions */
+
+a {
+    color: #314E5D;
+    transition: opacity 0.2s ease-out;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+.icons a img:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.nav-item a:hover {
+    letter-spacing: 0.3rem;
+    padding-left: 0.3rem;
+    margin: 0, 0.2rem;
+}
+
+/* Nav Bar media query for screens under 1100px*/
+
+@media only screen and (max-width: 1100px) {
+
+    .navbar {
+        position: initial;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding-bottom: 2rem;
+    }
+
+    .logo-container {
+        position: static;
+        order: 1;
+        margin-left: 0;
+        height: 8rem;
+        
+    }
+
+    .nav-links {
+        order: 2;
+        margin-top: 1rem;
+        margin-right: 0;
+    }
+
+    .icons {
+        order: 3;
+        margin-top: 1rem;
+        margin-left: 0;
+        
+    }
+}
+
+/* Main Grid */
+
+main.grid {
+    position: relative;
+    top: 8rem;
+    display: grid;
+    grid-template-columns: repeat (12, 1fr);
+}
+
+div.banner-image-container {
+    grid-column: 1 / 13; 
+    grid-row-start: 1;
+}
+
+.grid img {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 1100px) {
+    /* no more fixed nav bar!*/
+    main.grid {
+        position: initial;
+        
+    }
+}
+
+main div.flex {
+    grid-column: 1 / 13;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Rozha One', serif;
+    color: #6D5E42;
+    font-size: 3.5rem;
+    margin-top: 2rem;
+}
+
+div.new-release {
+    grid-row-start: 2;
+}
+
+div.bio {
+    grid-row-start: 3;
+    border-top: 1px solid #B6CDD8;
+    border-bottom: thin solid #B6CDD8;
+    position: relative;
+}
+
+div.tour {
+    grid-row-start: 4;
+    margin: 4rem 0;
+}
+
+div.contact {
+    grid-row-start: 5;
+    background-color: #314E5D;
+    margin-top: 2rem;
+    color: #FEFBF1;
+    padding: 4rem;
+}
+
+.contact h1.light-blue {
+    color: #87A4B2;
+    padding: 0.5rem;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: 'lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+h3 {
+    font-family: 'raleway', sans-serif;
+    letter-spacing: 0.1rem;
+    padding: 0.3rem;
+}
+
+div.bio p {
+    font-family: 'raleway', sans-serif;
+    color: #314E5D;
+    padding: 0.5rem;
+    font-size: 1.1rem; 
+    width: 80%;
+    height: 80%;
+    text-align: justify;
+    line-height: 1.2;
+    margin-top: 1.5rem;
+}
+
+.bio p.margin-bottom {
+    margin-bottom: 2.5rem;
+}
+
+.bio a {
+    position: absolute;
+    top: 88%;
+    font-family: 'Rozha One', serif;
+    text-transform: uppercase;
+    background-color: #314E5D;
+    padding: 1rem 2rem;
+    color: #FEFBF1;
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+    margin-top: 2rem;
+    border: 0;
+    transition: opacity 200ms ease-out, 
+    color 200ms ease-out;
+    transform-origin: center;
+
+    
+}
+
+.bio a:hover {
+    opacity: 0.7;
+    color: #FFF;
+    transform: scale(1.1, 1.1);
+}
+
