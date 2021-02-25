@@ -5,7 +5,31 @@ body {
     font-size: 14px;
     overflow-x: hidden;
 }
+/* Layout */
+/* Text */
+/* Images */
 
+.banner-image-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+}
+
+.banner-image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 1100px) {
+    /* no more fixed nav bar!*/
+    .banner-image-container {
+        position: initial;
+        
+    }
+}
+/* Sections */ 
 /* Nav Bar */
 
 .navbar {
@@ -128,19 +152,10 @@ a:hover {
 /* Main Grid */
 
 .grid {
-    position: relative;
-    top: 8rem;
     display: grid;
-    grid-template-columns: repeat (12, 1fr);
-}
-
-.banner-image-container {
-    grid-column: 1 / 13; 
-    grid-row-start: 1;
-}
-
-.banner-image-container img {
-    max-width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    top: 5rem;
 }
 
 @media only screen and (max-width: 1100px) {
