@@ -30,12 +30,12 @@
             <li class="links__item"><a href="#home">home</a></li>
             <li class="links__item"><a href="#music">music</a></li>
             <li class="links__item"><a href="#bio">bio</a></li>
-            <li class="links__item"><a href="#tour">video</a></li>
+            <li class="links__item"><a href="#video">video</a></li>
             <li class="links__item"><a href="#merch">merch</a></li>
             <li class="links__item"><a href="#contact">contact</a></li>
         </ul>
     </nav>
-    <div class="banner-image-container banner-image-container--initial">
+    <div class="banner-image-container banner-image-container--initial" id="home">
         <img src="media/images/banner-image-crop.jpg" alt="Photo of O&O">
     </div>
 </header>
@@ -43,13 +43,11 @@
     <!--Main Grid-->
     
     <main class="grid grid--initial">
-        
-
-        <div class="latest-releases flex #music">
+        <div class="latest-releases flex" id="music">
             <h1>latest releases</h1>
         </div>
 
-        <div class="bio flex #bio">
+        <div class="bio flex" id="bio">
             <h1>bio</h1>
             <p>With their releases to date, including their debut EP Truth Comes Out, American-Israeli duo O&O have garnered the attention of BBC London, Country Hits Radio, UK Country Radio, notable Country music blogs in the UK and across the pond. 
             Their long-awaited debut EP featured the stand-out single 'Tears in the Rain' which premiered on Nashville's The Bluegrass Situation. Following the resounding success of their last two singles, O&O are back with 'Leave It 'Til Tomorrow', co-written with the fabulous Laura Oakes, which premiered on Chris Country Radio.</p>
@@ -65,7 +63,22 @@
             <h1>live dates</h1>
         </div>-->
 
-        <div class="contact flex">
+        <div class="video flex" id="video">
+            <h1>video</h1>
+            <div class="video-width">
+                <div class="video-container">
+                    <iframe class="video-container__vid" width="560" height="315" src="https://www.youtube.com/embed/Mac9K6wkdEk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-grid">
+                <iframe width="550" height="309" src="https://www.youtube.com/embed/_PGKhLlPDCw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="550" height="309" src="https://www.youtube.com/embed/s-5beiqizho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="550" height="309" src="https://www.youtube.com/embed/q19EPN8REfw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="550" height="309" src="https://www.youtube.com/embed/XclWt8UODUw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="contact flex" id="contact">
             <ul class="icons contact__icons">
                 <li class="icons__instagram"><a href="https://www.instagram.com/oandoduo/" target="_blank" rel="noreferrer noopener"><img src="media/icons/instagram.png" alt="Instagram Logo"></a></li>
                 <li class="icons__twitter"><a href="https://twitter.com/oandoduo?lang=en" target="_blank" rel="noreferrer noopener"><img src="media/icons/twitter.png"></a></li>
@@ -77,13 +90,25 @@
             <div class="contact-details flex">
                 <h1 class="light-blue">get in touch</h1>
                     <h2>Management</h2>
-                        <h3>Triple Fret Entertainment</h3>
-                        <h3>emily@triplefretentertainment.com</h3>
-                        <h3 class="contact-details__number">(+44) 7881 581152</h3>
+                        <a href="https://www.triplefretentertainment.com/"target="_blank" rel="noreferrer noopener">
+                            <h3>Triple Fret Entertainment</h3>
+                        </a>
+                        <a href="mailto:emily@triplefretentertainment.com">
+                            <h3>emily@triplefretentertainment.com</h3>
+                        </a>
+                        <a href="tel:+447881 581152">
+                            <h3 class="contact-details__number">(+44) 7881 581152</h3>
+                        </a>
                     <h2>UK/Europe - PR & Radio Enquiries</h2>
-                        <h3>Luke Roberts - Lime Tree Music</h3>
-                        <h3>luke@limetreemusic.co.uk</h3>
-                        <h3 class="contact-details__number">(+44) 7849 576096</h3>
+                        <a href="https://www.limetreemusic.co.uk" target="_blank" rel="noreferrer noopener">
+                            <h3>Luke Roberts - Lime Tree Music</h3>
+                        </a>
+                        <a href="mailto:luke@limetreemusic.co.uk">
+                            <h3>luke@limetreemusic.co.uk</h3>
+                        </a>
+                        <a href="tel:+447849576096">
+                            <h3 class="contact-details__number">(+44) 7849 576096</h3>
+                        </a>
             </div>    
         </div>
     </main>

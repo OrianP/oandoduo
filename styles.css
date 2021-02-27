@@ -49,6 +49,15 @@ h3 {
     font-family: 'raleway', sans-serif;
     letter-spacing: 0.1rem;
     padding: 0.3rem;
+    color: #c4d2da;
+}
+
+a {
+    transition: opacity 0.2s ease-out;
+}
+
+a:hover {
+    opacity: 0.5;
 }
 
 /* Images */
@@ -122,6 +131,7 @@ h3 {
 
 .links__item a {
     font-family: 'lato', sans-serif;
+    color: #314E5D;
     font-weight: 700;
     text-transform: uppercase;
     padding: 0.6rem;
@@ -134,15 +144,6 @@ h3 {
 }
 
 /* Nav Bar Hover Transitions */
-
-a {
-    color: #314E5D;
-    transition: opacity 0.2s ease-out;
-}
-
-a:hover {
-    opacity: 0.5;
-}
 
 .icons a img:hover {
     transform: scale(1.5, 1.5);
@@ -158,14 +159,14 @@ a:hover {
 /* Music / Latest releases */
 
 .latest-releases {
-    grid-row-start: 2;
+    grid-row-start: 1;
 }
 
 
 /* Bio */
 
 .bio {
-    grid-row-start: 3;
+    grid-row-start: 2;
     border-top: 1px solid #B6CDD8;
     border-bottom: thin solid #B6CDD8;
     position: relative;
@@ -209,10 +210,47 @@ a:hover {
 
 /* no tour dates for now 
 .tour {
-    grid-row-start: 4;
+    grid-row-start: 3;
     margin: 4rem 0;
 } */
 
+
+/* Video */
+/* change grid-row-start to 4 when tour section goes live */
+.video {
+    grid-row-start: 3;
+    width: 100%;
+}
+
+.video-width {
+    width: 80%;
+    padding-top: 1.5rem;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+
+}
+.video-container__vid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-grid {
+    width: 80%;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
 
 /* Contact */ 
 /* change grid-row-start to 5 when tour section goes live */
@@ -281,6 +319,14 @@ a:hover {
      /* reset position to initial when navbar is not fixed */
      .banner-image-container--initial, .grid--initial, .footer--initial {
         position: initial;  
+    }
+
+    .bio p {
+        text-align: start;
+    }
+
+    .video-width {
+        width: 100%;
     }
 }
 
