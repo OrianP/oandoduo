@@ -242,6 +242,7 @@ a:hover {
     height: 100%;
 }
 
+
 .video-grid {
     width: 80%;
     display: grid;
@@ -249,7 +250,7 @@ a:hover {
     gap: 2rem;
     justify-items: center;
     align-items: center;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0 2rem 0;
 }
 
 /* Contact */ 
@@ -295,6 +296,7 @@ a:hover {
         align-items: center;
         height: auto;
         padding-bottom: 2rem;
+        width: 100%;
     }
 
     .logo-container {
@@ -321,6 +323,14 @@ a:hover {
         position: initial;  
     }
 
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        padding: 2rem 0;
+    }
+
     .bio p {
         text-align: start;
     }
@@ -328,5 +338,30 @@ a:hover {
     .video-width {
         width: 100%;
     }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: 1.5rem 0 0 0;
+    }
+
+
 }
+
+/* breaking point for very narrow mobile screens */
+@media only screen and (max-width: 425px) {
+    
+    .links{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        width: 100%;
+    }
+
+    .links__item {
+        padding-top: 0.2rem;
+    }
+
+}
+
 
