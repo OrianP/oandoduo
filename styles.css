@@ -89,7 +89,7 @@ a:hover {
 
 /* Images */
 
-.banner-image-container {
+.banner-container {
     width: 100%;
     height: auto;
     position: relative;
@@ -97,7 +97,17 @@ a:hover {
     overflow: hidden;
 }
 
-.banner-image-container img {
+.banner-container__img {
+    max-width: 100%;
+    height: auto;
+}
+
+.artwork-container {
+    overflow: hidden;
+    width: fit-content;
+}
+
+.artwork-container__img {
     max-width: 100%;
     height: auto;
 }
@@ -187,8 +197,33 @@ a:hover {
 
 .latest-releases {
     grid-row-start: 1;
+    width: 100%;
 }
 
+.artwork-grid {
+    display: grid;
+    width: 80%;
+    grid-template: repeat(2, minmax(250px, 1fr)) / repeat(8, 1fr);
+    grid-auto-flow: column;
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.artwork1 {
+    grid-area: 1 / 2 / 3 / 6;
+    
+
+}
+
+.artwork2 {
+    grid-area: 1 / 6 / 2 / span 3;
+    justify-self: start;
+}
+
+.artwork3 {
+    grid-area: 2 / 6 / 3 / span 3;
+    justify-self: start;
+    align-self: flex-end;
+}
 
 /* Bio */
 
@@ -325,7 +360,7 @@ a:hover {
     }
 
      /* reset position to initial when navbar is not fixed */
-     .banner-image-container--initial, .grid--initial, .footer--initial {
+     .banner-container--initial, .grid--initial, .footer--initial {
         position: initial;  
     }
 
