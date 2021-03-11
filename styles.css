@@ -109,7 +109,10 @@ a:hover {
 .artwork-container__img {
     max-width: 100%;
     height: auto;
+    box-shadow: 0 8px 6px -6px #414d53;
 }
+
+
 
 /* Section by section */ 
 
@@ -216,6 +219,30 @@ a:hover {
 
 .artwork3 {
     grid-area: 2 / 2 / 3 / 3;
+}
+
+.artwork-grid:hover > .artwork-container {
+    opacity: 0.5;
+}
+
+.artwork-grid:hover > .artwork-container:hover {
+    opacity: 1;
+}
+
+.artwork1, .artwork2, .artwork3 {
+transition: transform 400ms ease-in-out;
+}
+
+.artwork1:hover {
+    transform: translateX(-8px);
+}
+
+.artwork2:hover {
+    transform: translateX(8px);
+}
+
+.artwork3:hover {
+    transform: translateX(8px);
 }
 
 /* Bio */
@@ -394,16 +421,28 @@ a:hover {
     .artwork1 {
         grid-column-start: 1;
         grid-row-start: 1;
+        transition: none;
     }
     
     .artwork2 {
         grid-column-start: 1;
         grid-row-start: 2;
+        transition: none;
     }
     
     .artwork3 {
         grid-column-start: 1;
         grid-row-start: 3;
+        transition: none;
+    }
+
+    .artwork-grid:hover > .artwork-container {
+        opacity: initial;
+    }
+
+    .artwork-container:hover {
+        transform: none;
+    
     }
 }
 
