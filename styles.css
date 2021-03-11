@@ -34,6 +34,7 @@ h1 {
     color: #6D5E42;
     font-size: 3.5rem;
     margin-top: 2rem;
+    text-align: center;
 }
 
 h2 {
@@ -53,7 +54,8 @@ h3 {
 }
 
 a {
-    transition: opacity 0.2s ease-out;
+    transition: opacity 200ms ease-out;
+    text-align: center;
 }
 
 a:hover {
@@ -76,7 +78,8 @@ a:hover {
     border: 0;
     transition: color 200ms ease-out, 
     background-color 700ms ease-out;
-    /*not sure about this cta style - transform-origin: center;*/
+    box-shadow:  3px 3px 15px -5px #20333d,
+             -3px -3px 15px -5px #f7f1de;
 }
 
 .bio__cta:hover, .video__cta:hover {
@@ -150,10 +153,7 @@ a:hover {
 
 .logo-container {
     width: 10rem;
-    height: 10rem;
-    position: fixed;
-    left: 50%;
-    margin-left: -5rem;
+    margin-left: 5rem;
     
 }
 
@@ -361,10 +361,10 @@ transition: transform 400ms ease-in-out;
     }
 
     .logo-container {
-        position: static;
         order: 1;
         margin-left: 0;
-        height: 8rem; 
+        padding-top: 2rem;
+        
     }
 
     .links {
@@ -379,6 +379,16 @@ transition: transform 400ms ease-in-out;
         margin-left: 0;
     }
 
+    .icons a img:hover {
+        transform: none;
+    }
+    
+    .links__item a:hover {
+        transition: none;
+        letter-spacing: 0.1rem;
+        padding-left: unset;
+    }
+
      /* reset position to initial when navbar is not fixed */
      .banner-container--initial, .grid--initial, .footer--initial {
         position: initial;  
@@ -388,8 +398,13 @@ transition: transform 400ms ease-in-out;
         grid-template-columns: 1fr;
     }
 
-    .contact {
-        padding: 2rem 0;
+    .artwork-grid:hover > .artwork-container {
+        opacity: initial;
+    }
+
+    .artwork-container:hover {
+        transform: none;
+    
     }
 
     .bio p {
@@ -406,6 +421,9 @@ transition: transform 400ms ease-in-out;
         margin: 1.5rem 0 0 0;
     }
 
+    .contact {
+        padding: 2rem 0;
+    }
 
 }
 
@@ -436,14 +454,6 @@ transition: transform 400ms ease-in-out;
         transition: none;
     }
 
-    .artwork-grid:hover > .artwork-container {
-        opacity: initial;
-    }
-
-    .artwork-container:hover {
-        transform: none;
-    
-    }
 }
 
 /* break point for very narrow mobile screens */
@@ -458,6 +468,10 @@ transition: transform 400ms ease-in-out;
 
     .links__item {
         padding-top: 0.2rem;
+    }
+
+    .links__item a {
+        padding: unset;
     }
 
 }
