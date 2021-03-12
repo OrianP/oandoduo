@@ -1,5 +1,11 @@
 /* Universal Styles */
 
+html {
+    /* solution for fixed header covering top of jump links sections */ 
+    --top-spacing: 8rem;
+    scroll-padding-top: var(--top-spacing);
+  }
+
 body {
     background-color: #FEFBF1;
     font-size: 16px;
@@ -351,7 +357,11 @@ transition: transform 400ms ease-in-out;
 /* Media queries for tablet and mobile */
 
 @media only screen and (max-width: 1100px) {
-   
+    html {
+        --top-spacing: 0rem;
+        scroll-padding-top: var(--top-spacing);
+      }
+
     .navbar {
         position: initial;
         flex-flow: column;
