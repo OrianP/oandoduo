@@ -387,12 +387,27 @@ transition: transform 400ms ease-in-out;
     .icons a img:hover {
         transform: none;
     }
+
+    .icons a:hover {
+        opacity: 1;
+    }
+
+    .icons a:focus {
+        opacity: 0.5;
+        outline: none;
+    }
     
     .links__item a:hover {
         transition: none;
         letter-spacing: 0.1rem;
         padding: 0.6rem 0.6rem 0.6rem 0.1rem;
         margin: 0 0;
+        opacity: 1;
+    }
+
+    .links__item a:focus {
+        opacity: 0.5;
+        outline: none;
     }
 
      /* reset position to initial when navbar is not fixed */
@@ -475,7 +490,6 @@ transition: transform 400ms ease-in-out;
     .links__item {
         width: 100%;
         text-align: center;
-        padding: 0.5rem 0 0.5rem 0;
         border-bottom: 1px solid #414d53;
     }
 
@@ -483,12 +497,15 @@ transition: transform 400ms ease-in-out;
         padding: unset;
         letter-spacing: 0.5rem;
         width: 100%;
+        padding: 0.5rem 0 0.5rem 0;
         display: inline-block;
     }
 
     .links__item a:hover {
         transition: none;
         letter-spacing: 0.5rem;
+        padding: 0.5rem 0 0.5rem 0;
+        opacity: 1;
     }
 
 }
