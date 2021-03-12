@@ -153,8 +153,11 @@ a:hover {
 
 .logo-container {
     width: 10rem;
-    margin-left: 5rem;
-    
+    /* logo is absolute centered to the view port, ensuring it will not move when link items are hovered */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
 }
 
 .logo { 
@@ -173,11 +176,10 @@ a:hover {
     color: #314E5D;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 0.6rem;
+    padding: 0.6rem 0.6rem 0.6rem 0.1rem;
     font-size: 15px;
     text-align: center;
     letter-spacing: 0.1rem;
-    padding-left: 0.1rem;
     transition: letter-spacing 400ms ease-in;
 
 }
@@ -191,7 +193,7 @@ a:hover {
 .links__item a:hover {
     letter-spacing: 0.3rem;
     padding-left: 0.3rem;
-    margin: 0, 0.2rem;
+    margin: 0 0.2rem;
 }
 
 
@@ -362,9 +364,12 @@ transition: transform 400ms ease-in-out;
 
     .logo-container {
         order: 1;
-        margin-left: 0;
         padding-top: 2rem;
-        
+        /* since the navbar is no longer fixed, logo returns to the document flow, positioned relative to view port */
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
     }
 
     .links {
@@ -386,7 +391,8 @@ transition: transform 400ms ease-in-out;
     .links__item a:hover {
         transition: none;
         letter-spacing: 0.1rem;
-        padding-left: unset;
+        padding: 0.6rem 0.6rem 0.6rem 0.1rem;
+        margin: 0 0;
     }
 
      /* reset position to initial when navbar is not fixed */
@@ -460,18 +466,29 @@ transition: transform 400ms ease-in-out;
 @media only screen and (max-width: 425px) {
     
     .links{
-        display: flex;
         flex-flow: column wrap;
         align-items: center;
         width: 100%;
+        border-top: 1px solid #414d53;
     }
 
     .links__item {
-        padding-top: 0.2rem;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0 0.5rem 0;
+        border-bottom: 1px solid #414d53;
     }
 
     .links__item a {
         padding: unset;
+        letter-spacing: 0.5rem;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .links__item a:hover {
+        transition: none;
+        letter-spacing: 0.5rem;
     }
 
 }
