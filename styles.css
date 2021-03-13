@@ -72,7 +72,7 @@ a:hover {
 
 /* CTAs */
 
-.bio__cta, .video__cta  {
+.bio__cta, .video__cta, .contact__cta {
     font-family: 'Rozha One', serif;
     text-transform: uppercase;
     background-color: #314E5D;
@@ -94,6 +94,30 @@ a:hover {
     background-color: #87A4B2;
     /*transform: scale(1.1, 1.1);*/
 }
+
+.contact__cta.button {
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0.2rem 5rem;
+    margin: 0 0 2rem 0;
+    background-color: #87A4B2;
+    color: #233842;
+    box-shadow:  3px 3px 15px -5px #20333d,
+             -3px -3px 15px -5px #414d53;
+    transition: background-color 400ms ease-out, 
+    box-shadow 400ms ease-out;
+}
+
+.contact__cta.button:hover {
+    opacity: 1;
+    background-color: #233842;
+    color: #FEFBF1;
+    box-shadow:  3px 3px 15px -2px #435b68,
+             -3px -3px 15px -2px #435b68;
+
+}
+
+
 
 
 /* Images */
@@ -328,7 +352,7 @@ transition: transform 400ms ease-in-out;
     grid-row-start: 4;
     background-color: #314E5D;
     color: #FEFBF1;
-    padding: 4rem;
+    padding: 4rem 0;
 }
 
 .contact h1.light-blue {
@@ -336,6 +360,62 @@ transition: transform 400ms ease-in-out;
     padding: 0.5rem;
     margin-top: 0;
 }
+
+#mc_embed_signup {
+    width: 50%;
+    text-align: right;
+    padding: 1rem 2rem;
+    border-top: 1px solid #87A4B2;
+    border-bottom: 1px solid #87A4B2;
+}
+
+#mc_embed_signup_scroll {
+    display: flex;
+    flex-direction: column;
+}
+
+.mc-field-group {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem 0;
+
+}
+.mc-field-group label {
+    flex-grow: 1;
+    text-align: left;
+    align-self: center;
+}
+
+.mc-field-group input {
+    flex-basis: 80%;
+    padding: 0.2rem 0;
+    font-size: 1rem;
+    padding-left: 0.2rem;
+    color: #233842;
+}
+/* This is not working
+.mc-field-group input:focus {
+    outline: #414d53 invert;
+}*/
+
+.mc-field-group, .indicates-required {
+    font-family: 'raleway', sans-serif;
+}
+
+.indicates-required {
+    font-size: 12px;
+    text-transform: capitalize;
+    text-align: end;
+    padding-bottom: 0.5rem;
+}
+/*
+#mc-embedded-subscribe.button {
+    font-size: 1rem;
+    padding: 0.2rem 3rem;
+    border-radius: 5px;
+    background-color: #87A4B2;
+    color: #FEFBF1;
+}*/
 
 .contact-details__number {
     font-family:'lato', sans-serif;
