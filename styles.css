@@ -355,10 +355,15 @@ transition: transform 400ms ease-in-out;
     padding: 4rem 0;
 }
 
-.contact h1.light-blue {
+.contact__light-blue {
     color: #87A4B2;
     padding: 0.5rem;
     margin-top: 0;
+}
+
+.contact__centered-heading {
+    text-align: center;
+    line-height: 1.5;
 }
 
 .contact-details__number {
@@ -370,7 +375,7 @@ transition: transform 400ms ease-in-out;
 #mc_embed_signup {
     width: 50%;
     text-align: right;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
     border-top: 1px solid #87A4B2;
     border-bottom: 1px solid #87A4B2;
 }
@@ -531,9 +536,28 @@ transition: transform 400ms ease-in-out;
         padding: 2rem 0;
     }
 
+    /* MailChimp form */
+    
+    .mc-field-group {
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0.5rem 0;
+    
+    }
+    .mc-field-group label {
+        flex-grow: 1;
+        align-self: flex-start;
+        text-align:right;
+        padding: 0.2rem;
+    }
+
+    .contact__cta.button {
+        text-align: center;
+        width: 100%;
+    }
 }
 
-/* artwork grid break point */
+/* break point for artwork grid */
 @media only screen and (max-width: 765px) {
     .artwork-grid {
         grid-template-columns: 1fr;
@@ -560,9 +584,17 @@ transition: transform 400ms ease-in-out;
         transition: none;
     }
 
+
 }
 
-/* break point for very narrow mobile screens */
+/* break point for MailChimp form width */
+@media only screen and (max-width:620px) {
+#mc_embed_signup {
+    width: initial;
+    }
+}
+
+/* break point for navbar links on mobile screens */
 @media only screen and (max-width: 425px) {
     
     .links{
