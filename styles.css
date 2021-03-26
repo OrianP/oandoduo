@@ -548,7 +548,7 @@ transition: transform 400ms ease-in-out;
         flex-grow: 1;
         align-self: flex-start;
         text-align:right;
-        padding: 0.2rem;
+        padding-bottom: 0.2rem;
     }
 
     .contact__cta.button {
